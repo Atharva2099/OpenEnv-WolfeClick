@@ -2,207 +2,155 @@
 title: OpenEnv-WolfeClick Environment
 emoji: 🎮
 colorFrom: blue
-colorTo: purple
+colorTo: slate
 sdk: docker
 app_port: 8001
 tags:
  - openenv
  - pokemon
  - rl
+ - multi-agent
 ---
 
 # OpenEnv-WolfeClick
 
-OpenEnv-WolfeClick is a reinforcement learning environment and training workflow for competitive Pokemon battles with large language models.
+OpenEnv-WolfeClick is an OpenEnv-compatible environment for training LLMs in competitive Pokemon Showdown battles.
 
-The project was built for the OpenEnv hackathon to answer a specific question: can an LLM learn to act in a partially observable, adversarial, long-horizon environment where legal actions are constrained, rewards are delayed, and the opponent is another agent?
+The core idea is simple: rock-paper-scissors already shows that cyclic matchups create nontrivial reasoning. Competitive Pokemon scales that into a much richer world with hidden information, constrained legal actions, long-term resource tradeoffs, and an active opponent. This repo turns that setting into a trainable environment with a clean `reset()` / `step()` loop, an OpenEnv server wrapper, and a Colab GRPO training workflow.
 
-This repo focuses on that environment and a minimal Colab training path.
+## What is here
 
-## Why I Built This
-
-Pokemon battles are a strong multi-agent training environment for LLMs because they require:
-
-- hidden information and opponent modeling
-- long-horizon planning over many turns
-- legal action grounding under a constrained action space
-- adapting to a changing world state after every action
-- balancing local rewards against later consequences
-
-I built this environment to make those properties trainable with a simple `reset()` / `step()` loop and a small JSON action interface.
-
-## What is in this repo
-
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl): environment, state formatting, action space, reward shaping, and client code
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/trainer.ipynb`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/trainer.ipynb): main Colab notebook for warm-up SFT, rollout collection, and GRPO training
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/examples`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/examples): small local examples
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/pyproject.toml`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/pyproject.toml): package metadata
+- `src/smogon_rl/`
+  - core environment logic, state formatting, action validation, reward shaping, and the poke-env client
+- `env/`
+  - OpenEnv server package exposing the environment through `env.server.app:app`
+- `trainer.ipynb`
+  - Colab notebook for rollout collection and GRPO training
+- `watch_battle.ipynb`
+  - Colab notebook for running one live watched battle
+- `benckmarks/benchmark.ipynb`
+  - quick checkpoint-vs-checkpoint benchmark notebook
+- `openenv.yaml`
+  - OpenEnv entrypoint config
+- `Dockerfile`
+  - HF Spaces / Docker deployment path for the OpenEnv server
 
 ## Environment design
 
-### State design
-
-The state is not a raw simulator dump. It is a structured markdown representation designed to preserve strategic information while remaining readable to an LLM.
-
-Each prompt includes:
+Each turn, the model receives a structured markdown state containing:
 
 - active self Pokemon
 - active opponent Pokemon
-- HP, status, ability, item, and current stat modifiers
-- full self team roster with currently known moves
-- opponent history and revealed information
-- exact legal actions available this turn
+- HP, status, item, ability, and stat modifiers
+- full self roster and currently known moves
+- revealed opponent history
+- the exact legal actions for the turn
 
-This is implemented through the environment wrapper and state formatter:
-
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/openenv_sync_env.py`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/openenv_sync_env.py)
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/state_formatter.py`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/state_formatter.py)
-
-My design goal was to expose enough information for strategic decisions without giving the model shortcuts that bypass the game structure.
-
-### Action design
-
-The action space is deliberately constrained.
-
-The model must emit exactly one JSON object:
+The model must output exactly one JSON action:
 
 ```json
 {"action": "move" | "switch", "choice": "Exact Name of Move or Pokemon"}
 ```
 
-At every step, legal actions are enumerated from the current battle state using:
+This keeps the interface concrete and legally grounded. The environment validates the action, executes it in a real Showdown battle, and returns the next state, reward, and episode metadata.
 
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/action_space.py`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/action_space.py)
+## Reward
 
-This module does three important things:
+Rewards are shaped, but still tied to battle progress. The signal includes:
 
-- enumerates legal moves and switches for the turn
-- builds the action instruction block shown to the model
-- validates model outputs against the legal action set
-
-This matters because I do not want the model to “sort of” describe an action. I want the environment to enforce a concrete legal interface.
-
-### Reward design
-
-The environment reward is shaped but still tied to battle outcomes.
-
-Reward computation lives in:
-
-- [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/reward.py`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/reward.py)
-
-The reward includes:
-
-- damage dealt to the opponent
-- damage taken by the agent
+- damage dealt and damage taken
 - knockouts and faint penalties
 - healing value
 - setup value and opponent setup penalties
-- passive damage value
-- status penalties
-
-The environment wrapper in [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/openenv_sync_env.py`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/src/smogon_rl/openenv_sync_env.py) adds practical rollout constraints:
-
-- illegal action fallback handling
+- passive damage and status effects
 - illegal action penalties
-- anti-stall living penalty
-- battle length caps
-- no-progress termination penalties
+- small anti-stall / truncation penalties
 
-This separation is intentional:
+The goal is to create a denser learning signal without turning the task into a toy proxy objective.
 
-- `reward.py` captures battle-quality shaping
-- the env wrapper handles rollout hygiene and training throughput
+## Training workflow
 
-## Training design
+The training path is:
 
-### 1. Warm-up SFT
+1. start local Pokemon Showdown in Colab
+2. collect real rollout trajectories from live battles
+3. store prompt, chosen action, and environment reward
+4. train a LoRA adapter with GRPO on those real trajectories
+5. benchmark checkpoints against each other on the same env budget
 
-The notebook begins with a supervised warm-up stage so the model learns to emit valid action JSON for the battle-state prompt format.
+The repo includes both the training notebook and a smaller watch notebook for running one live battle with a chosen checkpoint.
 
-This does not claim strategic mastery. It only ensures the model is good enough to participate in the environment without collapsing into malformed outputs.
+## OpenEnv package
 
-### 2. Real rollout collection
+Yes, this repo includes a real OpenEnv environment package.
 
-The policy is then run in real Pokemon Showdown battles. For each turn, the notebook stores:
+The deployable server lives at:
 
-- `prompt`
-- `collected_action`
-- `collected_reward`
+- `env/server/app.py`
+- `env/server/environment.py`
+- `env/models.py`
 
-This makes the rollout data usable for GRPO training while preserving the exact environment reward signal.
+The OpenEnv config points to:
 
-### 3. GRPO training
+```yaml
+app: env.server.app:app
+```
 
-The GRPO reward used in the notebook is a wrapper around the stored rollout reward.
+That package wraps the local `PokemonShowdownEnv` and exposes it through the OpenEnv server interface.
 
-It is designed to preserve ranking pressure inside a completion group:
+## Local usage
 
-- malformed output is penalized strongly
-- valid but different actions are penalized lightly
-- the action matching the executed rollout action receives the collected environment reward plus a positive margin
-
-That matters because raw rollout rewards alone do not always create a clean learning signal for group-relative optimization.
-
-## How it works end to end
-
-1. Start Pokemon Showdown locally in Colab.
-2. Create the OpenEnv-style synchronous environment.
-3. Format battle state into markdown.
-4. Enumerate legal actions.
-5. Generate one JSON action from the model.
-6. Execute the action in the environment.
-7. Receive next state, reward, done flag, and info.
-8. Store rollout rows.
-9. Train with GRPO on the collected rows.
-
-## How to use
-
-### Local package install
-
-From the repo root:
+Install the local package:
 
 ```bash
 python3 -m pip install -e .
 ```
 
-### Colab training
+Run a simple local episode:
 
-Open [`/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/trainer.ipynb`](/Users/atharva/Desktop/Projects/OpenEnv-WolfeClick/trainer.ipynb) in Colab and run it top to bottom.
+```bash
+python3 examples/run_single_episode.py
+```
 
-The notebook does the following:
+Run one watched model battle:
 
-1. clones or uses the repo
-2. installs the training stack
-3. loads the model and LoRA adapter
-4. starts a local Pokemon Showdown server
-5. runs JSON warm-up SFT
-6. collects rollout data from real battles
-7. trains with GRPO
-8. optionally saves the adapter to Hugging Face Hub
+```bash
+python3 examples/watch_model_battle.py --revision grpo-qwen3-4b-run2
+```
 
-### Requirements
+## Colab usage
 
-- GPU runtime in Colab
-- local Pokemon Showdown server started from the notebook
-- Hugging Face token only if you want to push adapters
+- `trainer.ipynb`: collect rollouts and train with GRPO
+- `watch_battle.ipynb`: start Showdown, load a checkpoint, and run one live battle
+- `benckmarks/benchmark.ipynb`: compare checkpoints quickly
 
-## Current status
+These notebooks assume a GPU runtime for model inference/training.
 
-This repo now has a working end-to-end path where:
+## Deployment
 
-- real battle rollouts are collected from the environment
-- valid action JSON is produced reliably after warm-up
-- GRPO can train on real rollout data in the non-quantized plain TRL path
+The repo includes the files needed for an OpenEnv-style deployment:
 
-This is the basis for my hackathon demo and benchmark runs.
+- `openenv.yaml`
+- `Dockerfile`
+- `env/` package
 
-## Submission notes
+The Docker image starts:
 
-This repo is intended to be my clean hackathon submission repo.
+- local Pokemon Showdown on port `8000`
+- the OpenEnv FastAPI server on port `8001`
 
-Linked artifacts to add before submission:
+## Current artifacts
 
-- Hugging Face model repo: [https://huggingface.co/Atharva2099/openenv-smogon-rl/tree/grpo-qwen3-4b-run1](https://huggingface.co/Atharva2099/openenv-smogon-rl/tree/grpo-qwen3-4b-run1)
-- Hugging Face Space using OpenEnv stable release `0.2.1`
-- benchmark/results file
-- 1-minute demo video
+- HF model repo: `Atharva2099/openenv-smogon-rl`
+- adapter revisions: `grpo-qwen3-4b-run1`, `grpo-qwen3-4b-run2`
+
+## Status
+
+This is a working end-to-end environment and training repo:
+
+- live battle rollouts work
+- GRPO training on real trajectories works
+- checkpoint benchmarking works
+- the OpenEnv server package exists in-repo
+
+The next useful polish steps are HF Spaces deployment validation, README/blog cleanup, and a short write-up/demo around the environment design and results.
