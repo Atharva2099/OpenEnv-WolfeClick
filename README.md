@@ -1,3 +1,16 @@
+---
+title: OpenEnv-WolfeClick Environment
+emoji: 🎮
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 8001
+tags:
+ - openenv
+ - pokemon
+ - rl
+---
+
 # OpenEnv-WolfeClick
 
 OpenEnv-WolfeClick is a reinforcement learning environment and training workflow for competitive Pokemon battles with large language models.
