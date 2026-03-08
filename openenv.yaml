@@ -1,0 +1,7 @@
+spec_version: 1
+name: openenv-wolfeclick
+type: space
+runtime: fastapi
+app: env.server.app:app
+port: 8001
+
