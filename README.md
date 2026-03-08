@@ -189,7 +189,7 @@ This repo is intended to be my clean hackathon submission repo.
 
 Linked artifacts to add before submission:
 
-- Hugging Face model repo
+- Hugging Face model repo: [https://huggingface.co/Atharva2099/openenv-smogon-rl/tree/grpo-qwen3-4b-run1](https://huggingface.co/Atharva2099/openenv-smogon-rl/tree/grpo-qwen3-4b-run1)
 - Hugging Face Space using OpenEnv stable release `0.2.1`
 - benchmark/results file
 - 1-minute demo video
