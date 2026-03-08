@@ -18,10 +18,10 @@ COPY . /app
 
 # Install Python dependencies, including OpenEnv core 0.2.1
 RUN pip install --no-cache-dir \
-    \"openenv-core==0.2.1\" \
-    \"poke-env>=0.8.0,<0.9.0\" \
-    \"numpy>=1.24.0\" \
-    \"pydantic>=2.0.0\"
+    openenv-core==0.2.1 \
+    "poke-env>=0.8.0,<0.9.0" \
+    "numpy>=1.24.0" \
+    "pydantic>=2.0.0"
 
 ENV SHOWDOWN_DIR=/opt/pokemon-showdown
 
