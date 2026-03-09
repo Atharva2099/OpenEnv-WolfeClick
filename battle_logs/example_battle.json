@@ -1,0 +1,229 @@
+{
+  "model": "Qwen/Qwen3-4B-Instruct-2507 + LoRA grpo-qwen3-4b-run3",
+  "format": "gen4randombattle",
+  "outcome": "won",
+  "total_reward": 4.7,
+  "total_turns": 12,
+  "turns": [
+    {
+      "turn": 1,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Infernape\n- HP: 100.0%\n- Status: Healthy\n- Ability: Blaze\n- Item: Life Orb\n- Stat Modifiers: None\n### Active Opponent\n- Name: Swampert\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 112-243\n\n## Part B: Full Self Roster\n- Infernape HP:100% OK Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 100.0% | Status: Healthy",
+      "valid_actions": [
+        {"action": "move", "choice": "closecombat"},
+        {"action": "move", "choice": "flamethrower"},
+        {"action": "move", "choice": "grassknot"},
+        {"action": "move", "choice": "machpunch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "grassknot"},
+      "reward": 1.95,
+      "cumulative_reward": 1.95,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 2,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Infernape\n- HP: 90.0%\n- Status: Healthy\n- Ability: Blaze\n- Item: Life Orb\n- Stat Modifiers: None\n### Active Opponent\n- Name: Swampert\n- HP: 32.0%\n- Status: Healthy\n- Speed Range: 112-243\n\n## Part B: Full Self Roster\n- Infernape HP:90% OK Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 32.0% | Status: Healthy\n  - Revealed moves: earthquake",
+      "valid_actions": [
+        {"action": "move", "choice": "closecombat"},
+        {"action": "move", "choice": "flamethrower"},
+        {"action": "move", "choice": "grassknot"},
+        {"action": "move", "choice": "machpunch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "grassknot"},
+      "reward": 3.15,
+      "cumulative_reward": 5.1,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 3,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Infernape\n- HP: 80.0%\n- Status: Healthy\n- Ability: Blaze\n- Item: Life Orb\n- Stat Modifiers: None\n### Active Opponent\n- Name: Gengar\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 178-350\n\n## Part B: Full Self Roster\n- Infernape HP:80% OK Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 100.0% | Status: Healthy",
+      "valid_actions": [
+        {"action": "move", "choice": "closecombat"},
+        {"action": "move", "choice": "flamethrower"},
+        {"action": "move", "choice": "grassknot"},
+        {"action": "move", "choice": "machpunch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "flamethrower"},
+      "reward": 0.85,
+      "cumulative_reward": 5.95,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 4,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Infernape\n- HP: 45.0%\n- Status: Healthy\n- Ability: Blaze\n- Item: Life Orb\n- Stat Modifiers: None\n### Active Opponent\n- Name: Gengar\n- HP: 55.0%\n- Status: Healthy\n- Speed Range: 178-350\n\n## Part B: Full Self Roster\n- Infernape HP:45% OK Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 55.0% | Status: Healthy\n  - Revealed moves: shadowball",
+      "valid_actions": [
+        {"action": "move", "choice": "closecombat"},
+        {"action": "move", "choice": "flamethrower"},
+        {"action": "move", "choice": "grassknot"},
+        {"action": "move", "choice": "machpunch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "machpunch"},
+      "reward": -0.55,
+      "cumulative_reward": 5.4,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 5,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Jolteon\n- HP: 100.0%\n- Status: Healthy\n- Ability: Volt Absorb\n- Item: Choice Specs\n- Stat Modifiers: None\n### Active Opponent\n- Name: Gengar\n- HP: 55.0%\n- Status: Healthy\n- Speed Range: 178-350\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 55.0% | Status: Healthy\n  - Revealed moves: shadowball, focusblast",
+      "valid_actions": [
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "shadowball"},
+        {"action": "move", "choice": "hiddenpowerice"},
+        {"action": "move", "choice": "voltswitch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "shadowball"},
+      "reward": 2.5,
+      "cumulative_reward": 7.9,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 6,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Jolteon\n- HP: 100.0%\n- Status: Healthy\n- Ability: Volt Absorb\n- Item: Choice Specs\n- Stat Modifiers: None\n### Active Opponent\n- Name: Skarmory\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 130-262\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:100% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 100.0% | Status: Healthy",
+      "valid_actions": [
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "shadowball"},
+        {"action": "move", "choice": "hiddenpowerice"},
+        {"action": "move", "choice": "voltswitch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "thunderbolt"},
+      "reward": 1.45,
+      "cumulative_reward": 9.35,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 7,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Jolteon\n- HP: 85.0%\n- Status: Healthy\n- Ability: Volt Absorb\n- Item: Choice Specs\n- Stat Modifiers: None\n### Active Opponent\n- Name: Skarmory\n- HP: 42.0%\n- Status: Healthy\n- Speed Range: 130-262\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:85% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 42.0% | Status: Healthy\n  - Revealed moves: bravebird, roost",
+      "valid_actions": [
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "shadowball"},
+        {"action": "move", "choice": "hiddenpowerice"},
+        {"action": "move", "choice": "voltswitch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "thunderbolt"},
+      "reward": 1.3,
+      "cumulative_reward": 10.65,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 8,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Jolteon\n- HP: 70.0%\n- Status: Healthy\n- Ability: Volt Absorb\n- Item: Choice Specs\n- Stat Modifiers: None\n### Active Opponent\n- Name: Flygon\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 152-299\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:100% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:70% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 0.0% | Status: fnt\n  - Revealed moves: bravebird, roost\n- Flygon | Last HP: 100.0% | Status: Healthy",
+      "valid_actions": [
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "shadowball"},
+        {"action": "move", "choice": "hiddenpowerice"},
+        {"action": "move", "choice": "voltswitch"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "switch", "choice": "Starmie"},
+      "reward": -0.55,
+      "cumulative_reward": 10.1,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 9,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Starmie\n- HP: 78.0%\n- Status: Healthy\n- Ability: Natural Cure\n- Item: Leftovers\n- Stat Modifiers: None\n### Active Opponent\n- Name: Flygon\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 152-299\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:78% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:70% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 0.0% | Status: fnt\n  - Revealed moves: bravebird, roost\n- Flygon | Last HP: 100.0% | Status: Healthy\n  - Revealed moves: earthquake, outrage",
+      "valid_actions": [
+        {"action": "move", "choice": "surf"},
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "icebeam"},
+        {"action": "move", "choice": "recover"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "icebeam"},
+      "reward": 3.45,
+      "cumulative_reward": 13.55,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 10,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Starmie\n- HP: 78.0%\n- Status: Healthy\n- Ability: Natural Cure\n- Item: Leftovers\n- Stat Modifiers: None\n### Active Opponent\n- Name: Roserade\n- HP: 100.0%\n- Status: Healthy\n- Speed Range: 156-306\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:78% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:70% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 0.0% | Status: fnt\n  - Revealed moves: bravebird, roost\n- Flygon | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake, outrage\n- Roserade | Last HP: 100.0% | Status: Healthy",
+      "valid_actions": [
+        {"action": "move", "choice": "surf"},
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "icebeam"},
+        {"action": "move", "choice": "recover"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "icebeam"},
+      "reward": 0.85,
+      "cumulative_reward": 14.4,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 11,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Starmie\n- HP: 50.0%\n- Status: psn\n- Ability: Natural Cure\n- Item: Leftovers\n- Stat Modifiers: None\n### Active Opponent\n- Name: Roserade\n- HP: 45.0%\n- Status: Healthy\n- Speed Range: 156-306\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:50% psn Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:100% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:70% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 0.0% | Status: fnt\n  - Revealed moves: bravebird, roost\n- Flygon | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake, outrage\n- Roserade | Last HP: 45.0% | Status: Healthy\n  - Revealed moves: toxicspikes, energyball",
+      "valid_actions": [
+        {"action": "move", "choice": "surf"},
+        {"action": "move", "choice": "thunderbolt"},
+        {"action": "move", "choice": "icebeam"},
+        {"action": "move", "choice": "recover"},
+        {"action": "switch", "choice": "Togekiss"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "switch", "choice": "Togekiss"},
+      "reward": -0.55,
+      "cumulative_reward": 13.85,
+      "action_was_illegal": false
+    },
+    {
+      "turn": 12,
+      "state_markdown": "## Part A: Active Field\n### Active Self\n- Name: Togekiss\n- HP: 75.0%\n- Status: Healthy\n- Ability: Serene Grace\n- Item: Choice Scarf\n- Stat Modifiers: None\n### Active Opponent\n- Name: Roserade\n- HP: 45.0%\n- Status: Healthy\n- Speed Range: 156-306\n\n## Part B: Full Self Roster\n- Infernape HP:0% fnt Item:Life Orb\n  Moves: closecombat(F120) | flamethrower(F90) | grassknot(G0) | machpunch(F40)\n- Starmie HP:50% OK Item:Leftovers\n  Moves: surf(W90) | thunderbolt(E90) | icebeam(I90) | recover(N0)\n- Togekiss HP:75% OK Item:Choice Scarf\n  Moves: airslash(F75) | aurasphere(F80) | trick(N0) | roost(F0)\n- Hippowdon HP:100% OK Item:Leftovers\n  Moves: earthquake(G100) | stealthrock(R0) | slackoff(N0) | toxic(P0)\n- Jolteon HP:70% OK Item:Choice Specs\n  Moves: thunderbolt(E90) | shadowball(G80) | hiddenpowerice(I60) | voltswitch(E70)\n- Heracross HP:100% OK Item:Choice Band\n  Moves: closecombat(F120) | megahorn(B120) | stoneedge(R100) | nightslash(D70)\n\n## Part C: Opponent History\n- Swampert | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake\n- Gengar | Last HP: 0.0% | Status: fnt\n  - Revealed moves: shadowball, focusblast\n- Skarmory | Last HP: 0.0% | Status: fnt\n  - Revealed moves: bravebird, roost\n- Flygon | Last HP: 0.0% | Status: fnt\n  - Revealed moves: earthquake, outrage\n- Roserade | Last HP: 45.0% | Status: Healthy\n  - Revealed moves: toxicspikes, energyball, sludgebomb",
+      "valid_actions": [
+        {"action": "move", "choice": "airslash"},
+        {"action": "move", "choice": "aurasphere"},
+        {"action": "move", "choice": "trick"},
+        {"action": "move", "choice": "roost"},
+        {"action": "switch", "choice": "Starmie"},
+        {"action": "switch", "choice": "Hippowdon"},
+        {"action": "switch", "choice": "Jolteon"},
+        {"action": "switch", "choice": "Heracross"}
+      ],
+      "chosen_action": {"action": "move", "choice": "airslash"},
+      "reward": 3.45,
+      "cumulative_reward": 17.3,
+      "action_was_illegal": false
+    }
+  ]
+}
