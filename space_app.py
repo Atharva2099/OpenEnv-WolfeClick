@@ -31,4 +31,3 @@ def index() -> FileResponse:
 @app.get("/api/replay")
 def replay() -> JSONResponse:
     return JSONResponse(load_replay())
-
