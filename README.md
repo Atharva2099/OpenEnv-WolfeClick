@@ -2,7 +2,7 @@
 title: OpenEnv-WolfeClick Environment
 emoji: 🎮
 colorFrom: blue
-colorTo: slate
+colorTo: gray
 sdk: docker
 app_port: 7860
 tags:
