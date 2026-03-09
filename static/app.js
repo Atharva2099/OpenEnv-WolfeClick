@@ -51,6 +51,7 @@ function toShowdownName(name) {
 function spriteCandidates(name) {
   const s = toShowdownName(name);
   return [
+    `/static/sprites/${s}.png`,
     `https://play.pokemonshowdown.com/sprites/gen5/${s}.png`,
     `https://play.pokemonshowdown.com/sprites/gen4/${s}.png`,
     `https://play.pokemonshowdown.com/sprites/gen3/${s}.png`,
