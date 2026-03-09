@@ -58,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--temperature", type=float, default=0.3)
     parser.add_argument("--top-p", type=float, default=0.95)
     parser.add_argument("--top-k", type=int, default=20)
-    parser.add_argument("--max-steps", type=int, default=30)
+    parser.add_argument("--max-steps", type=int, default=100)
     parser.add_argument(
         "--output",
         default="battle_logs/example_battle.json",
@@ -141,10 +141,21 @@ def load_model(repo_id: str, revision: str):
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
+    # MPS (Apple Silicon) supports float16; CUDA does too; CPU falls back to float32
+    if torch.cuda.is_available():
+        dtype = torch.float16
+        device_map = "auto"
+    elif torch.backends.mps.is_available():
+        dtype = torch.float16
+        device_map = {"": "mps"}
+    else:
+        dtype = torch.float32
+        device_map = "auto"
+
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-        device_map="auto",
+        torch_dtype=dtype,
+        device_map=device_map,
         token=token,
         trust_remote_code=True,
     )
@@ -178,6 +189,43 @@ def choose_action(model, tokenizer, state_str, valid_actions, args):
     return json.dumps({"action": fallback.action_type, "choice": fallback.choice}), True
 
 
+def _normalize_event_tokens(event) -> list[str]:
+    if isinstance(event, list):
+        return [str(part) for part in event]
+    return [str(event)]
+
+
+def _format_event_tokens(tokens: list[str]) -> str:
+    cleaned = [t for t in tokens if t]
+    return " | ".join(cleaned) if cleaned else ""
+
+
+def _extract_turn_events(battle, battle_turn: int) -> tuple[list[list[str]], list[str]]:
+    obs = battle.observations.get(battle_turn)
+    if obs is None:
+        return [], []
+    token_events = [_normalize_event_tokens(event) for event in getattr(obs, "events", [])]
+    rendered_events = [_format_event_tokens(tokens) for tokens in token_events if tokens]
+    rendered_events = [line for line in rendered_events if line]
+    return token_events, rendered_events
+
+
+def _infer_opponent_action(token_events: list[list[str]]) -> dict | None:
+    for tokens in token_events:
+        if len(tokens) < 3:
+            continue
+        event_type = tokens[1]
+        actor = tokens[2]
+        if not actor.startswith("p2"):
+            continue
+        if event_type == "move" and len(tokens) >= 4:
+            return {"type": "move", "choice": tokens[3], "source": actor, "confidence": "logged"}
+        if event_type in {"switch", "drag"} and len(tokens) >= 4:
+            species = tokens[3].split(",")[0].strip()
+            return {"type": "switch", "choice": species, "source": actor, "confidence": "logged"}
+    return None
+
+
 def main() -> None:
     args = parse_args()
     out_path = Path(args.output)
@@ -201,6 +249,10 @@ def main() -> None:
         print("Starting battle...")
         state_str = env.reset()
         battle = env._ensure_battle()
+        battle_tag = getattr(battle, "battle_tag", None)
+        room_path = f"/{battle_tag}" if battle_tag else None
+        if room_path is not None:
+            print(f"Battle room path: {room_path}")
 
         turns = []
         done = False
@@ -210,6 +262,7 @@ def main() -> None:
         while not done:
             step_idx += 1
             battle = env._ensure_battle()
+            battle_turn = battle.turn
             valid_actions = enumerate_actions(battle)
             if not valid_actions:
                 print("No valid actions available; ending battle.")
@@ -225,6 +278,9 @@ def main() -> None:
             prev_state = state_str
             state_str, reward, done, info = env.step(action_json_str)
             total_reward += float(reward)
+            updated_battle = env._ensure_battle()
+            token_events, rendered_events = _extract_turn_events(updated_battle, battle_turn)
+            opponent_action = _infer_opponent_action(token_events)
 
             try:
                 chosen_action = json.loads(action_json_str)
@@ -233,12 +289,19 @@ def main() -> None:
 
             turn_record = {
                 "turn": step_idx,
+                "battle_turn": battle_turn,
                 "state_markdown": prev_state,
+                "post_state_markdown": state_str,
                 "valid_actions": valid_actions_json,
                 "chosen_action": chosen_action,
+                "opponent_action": opponent_action,
+                "showdown_event_tokens": token_events,
+                "showdown_events": rendered_events,
                 "reward": round(float(reward), 4),
                 "cumulative_reward": round(total_reward, 4),
                 "action_was_illegal": was_illegal,
+                "done": bool(done),
+                "done_reason": info.get("reason"),
             }
             turns.append(turn_record)
             print(
@@ -250,11 +313,17 @@ def main() -> None:
         won = getattr(final_battle, "won", None)
         lost = getattr(final_battle, "lost", None)
         outcome = "won" if won else ("lost" if lost else "unknown")
+        natural_finish = bool(getattr(final_battle, "finished", False)) and info.get("reason") == "battle_finished"
 
         battle_log = {
             "model": f"{MODEL_NAME} + LoRA {args.revision}",
             "format": args.battle_format,
             "outcome": outcome,
+            "battle_tag": getattr(final_battle, "battle_tag", battle_tag),
+            "room_path": room_path,
+            "natural_finish": natural_finish,
+            "final_reason": info.get("reason"),
+            "battle_finished": bool(getattr(final_battle, "finished", False)),
             "total_reward": round(total_reward, 4),
             "total_turns": step_idx,
             "turns": turns,
