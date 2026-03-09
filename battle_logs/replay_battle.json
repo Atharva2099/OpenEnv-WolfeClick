@@ -1,0 +1,3566 @@
+{
+  "meta": {
+    "title": "OpenEnv-WolfeClick Replay",
+    "model": "Qwen/Qwen3-4B-Instruct-2507 + LoRA grpo-qwen3-4b-run3",
+    "format": "gen4randombattle",
+    "outcome": "won",
+    "natural_finish": true,
+    "final_reason": "battle_finished",
+    "battle_tag": "battle-gen4randombattle-12",
+    "room_path": "/battle-gen4randombattle-12",
+    "total_turns": 46,
+    "total_reward": 4.4258
+  },
+  "teams": {
+    "player": [
+      {
+        "name": "xatu"
+      },
+      {
+        "name": "gorebyss"
+      },
+      {
+        "name": "corsola"
+      },
+      {
+        "name": "tangrowth"
+      },
+      {
+        "name": "aggron"
+      },
+      {
+        "name": "ambipom"
+      }
+    ],
+    "opponent": [
+      {
+        "name": "vigoroth"
+      },
+      {
+        "name": "gorebyss"
+      },
+      {
+        "name": "dialga"
+      },
+      {
+        "name": "wailord"
+      },
+      {
+        "name": "ninetales"
+      },
+      {
+        "name": "salamence"
+      }
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "battle_turn": 1,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "grassknot"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Earthquake",
+        "source": "p2a: Vigoroth",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "reward": 2.05,
+      "cumulative_reward": 2.05,
+      "commentary": [
+        "p1a: Xatu used Grass Knot on p2a: Vigoroth.",
+        "p2a: Vigoroth dropped to 79/100 HP.",
+        "p2a: Vigoroth used Earthquake on p1a: Xatu.",
+        "The target was immune."
+      ],
+      "showdown_events": [
+        "move | p1a: Xatu | Grass Knot | p2a: Vigoroth",
+        "-damage | p2a: Vigoroth | 79/100",
+        "move | p2a: Vigoroth | Earthquake | p1a: Xatu",
+        "-immune | p1a: Xatu",
+        "upkeep",
+        "turn | 2"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "move",
+          "choice": "psychic"
+        },
+        {
+          "action": "move",
+          "choice": "trick"
+        },
+        {
+          "action": "move",
+          "choice": "heatwave"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "tangrowth"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "battle_turn": 2,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "grassknot"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Gorebyss",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 74.0,
+        "status": "Healthy"
+      },
+      "reward": 0.2,
+      "cumulative_reward": 2.25,
+      "commentary": [
+        "p2a: Gorebyss switched to Gorebyss, L88, M (100/100).",
+        "p1a: Xatu used Grass Knot on p2a: Gorebyss.",
+        "It was super effective.",
+        "p2a: Gorebyss dropped to 74/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Gorebyss | Gorebyss, L88, M | 100/100",
+        "move | p1a: Xatu | Grass Knot | p2a: Gorebyss",
+        "-supereffective | p2a: Gorebyss",
+        "-damage | p2a: Gorebyss | 74/100",
+        "upkeep",
+        "turn | 3"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "tangrowth"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 3,
+      "battle_turn": 3,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 74.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "gorebyss"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Hidden Power",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "gorebyss",
+        "hp": 23.3,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 64.0,
+        "status": "Healthy"
+      },
+      "reward": -0.7,
+      "cumulative_reward": 1.55,
+      "commentary": [
+        "p1a: Gorebyss switched to Gorebyss, L88, M (240/240).",
+        "p2a: Gorebyss used Hidden Power on p1a: Gorebyss.",
+        "It was super effective.",
+        "p1a: Gorebyss dropped to 56/240 HP.",
+        "p2a: Gorebyss dropped to 64/100 | [from] item: Life Orb HP."
+      ],
+      "showdown_events": [
+        "switch | p1a: Gorebyss | Gorebyss, L88, M | 240/240",
+        "move | p2a: Gorebyss | Hidden Power | p1a: Gorebyss",
+        "-supereffective | p1a: Gorebyss",
+        "-damage | p1a: Gorebyss | 56/240",
+        "-damage | p2a: Gorebyss | 64/100 | [from] item: Life Orb",
+        "upkeep",
+        "turn | 4"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "tangrowth"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "battle_turn": 4,
+      "player_active_before": {
+        "name": "gorebyss",
+        "hp": 23.3,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 64.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "corsola"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Ice Beam",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 87.2,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 54.0,
+        "status": "Healthy"
+      },
+      "reward": 0.2375,
+      "cumulative_reward": 1.7875,
+      "commentary": [
+        "p1a: Corsola switched to Corsola, L98, M (266/266).",
+        "p2a: Gorebyss used Ice Beam on p1a: Corsola.",
+        "It was resisted.",
+        "p1a: Corsola dropped to 216/266 HP.",
+        "p2a: Gorebyss dropped to 54/100 | [from] item: Life Orb HP.",
+        "p1a: Corsola recovered to 232/266 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "switch | p1a: Corsola | Corsola, L98, M | 266/266",
+        "move | p2a: Gorebyss | Ice Beam | p1a: Corsola",
+        "-resisted | p1a: Corsola",
+        "-damage | p1a: Corsola | 216/266",
+        "-damage | p2a: Gorebyss | 54/100 | [from] item: Life Orb",
+        "-heal | p1a: Corsola | 232/266 | [from] item: Leftovers",
+        "upkeep",
+        "turn | 5"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "raindance"
+        },
+        {
+          "action": "move",
+          "choice": "hiddenpowergrass"
+        },
+        {
+          "action": "move",
+          "choice": "icebeam"
+        },
+        {
+          "action": "move",
+          "choice": "hydropump"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "tangrowth"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 5,
+      "battle_turn": 5,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 87.2,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 54.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "tangrowth"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Dialga",
+        "source": "p2a: Dialga",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "dialga",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 1.7375,
+      "commentary": [
+        "p2a: Dialga switched to Dialga, L70 (100/100).",
+        "p1a: Tangrowth switched to Tangrowth, L89, F (323/323)."
+      ],
+      "showdown_events": [
+        "switch | p2a: Dialga | Dialga, L70 | 100/100",
+        "-ability | p2a: Dialga | Pressure",
+        "switch | p1a: Tangrowth | Tangrowth, L89, F | 323/323",
+        "upkeep",
+        "turn | 6"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "tangrowth"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 6,
+      "battle_turn": 6,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "dialga",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Rest",
+        "source": "p2a: Dialga",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "reward": 6.2833,
+      "cumulative_reward": 8.0208,
+      "commentary": [
+        "p2a: Dialga used Rest on p2a: Dialga.",
+        "p1a: Tangrowth used Earthquake on p2a: Dialga.",
+        "It was super effective.",
+        "p2a: Dialga dropped to 0 fnt HP.",
+        "p2a: Dialga fainted.",
+        "p2a: Vigoroth switched to Vigoroth, L89, M (79/100)."
+      ],
+      "showdown_events": [
+        "move | p2a: Dialga | Rest | p2a: Dialga",
+        "-fail | p2a: Dialga | heal",
+        "move | p1a: Tangrowth | Earthquake | p2a: Dialga",
+        "-supereffective | p2a: Dialga",
+        "-crit | p2a: Dialga",
+        "-damage | p2a: Dialga | 0 fnt",
+        "faint | p2a: Dialga",
+        "upkeep",
+        "switch | p2a: Vigoroth | Vigoroth, L89, M | 79/100",
+        "turn | 7"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 7,
+      "battle_turn": 7,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Wailord",
+        "source": "p2a: Wailord",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "wailord",
+        "hp": 73.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 7.9708,
+      "commentary": [
+        "p2a: Wailord switched to Wailord, L88, M (100/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Wailord.",
+        "p2a: Wailord dropped to 73/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Wailord | Wailord, L88, M | 100/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Wailord",
+        "-damage | p2a: Wailord | 73/100",
+        "upkeep",
+        "turn | 8"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 8,
+      "battle_turn": 8,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "wailord",
+        "hp": 73.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Ninetales",
+        "source": "p2a: Ninetales",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "ninetales",
+        "hp": 36.0,
+        "status": "Healthy"
+      },
+      "reward": 0.26,
+      "cumulative_reward": 8.2308,
+      "commentary": [
+        "p2a: Ninetales switched to Ninetales, L85, F (100/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Ninetales.",
+        "It was super effective.",
+        "p2a: Ninetales dropped to 36/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Ninetales | Ninetales, L85, F | 100/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Ninetales",
+        "-supereffective | p2a: Ninetales",
+        "-damage | p2a: Ninetales | 36/100",
+        "upkeep",
+        "turn | 9"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 9,
+      "battle_turn": 9,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "ninetales",
+        "hp": 36.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Hypnosis",
+        "source": "p2a: Ninetales",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "reward": 3.67,
+      "cumulative_reward": 11.9008,
+      "commentary": [
+        "p2a: Ninetales used Hypnosis on p1a: Tangrowth | [miss].",
+        "p1a: Tangrowth used Earthquake on p2a: Ninetales.",
+        "It was super effective.",
+        "p2a: Ninetales dropped to 0 fnt HP.",
+        "p2a: Ninetales fainted.",
+        "p2a: Vigoroth switched to Vigoroth, L89, M (79/100)."
+      ],
+      "showdown_events": [
+        "move | p2a: Ninetales | Hypnosis | p1a: Tangrowth | [miss]",
+        "-miss | p2a: Ninetales | p1a: Tangrowth",
+        "move | p1a: Tangrowth | Earthquake | p2a: Ninetales",
+        "-supereffective | p2a: Ninetales",
+        "-damage | p2a: Ninetales | 0 fnt",
+        "faint | p2a: Ninetales",
+        "upkeep",
+        "switch | p2a: Vigoroth | Vigoroth, L89, M | 79/100",
+        "turn | 10"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 10,
+      "battle_turn": 10,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 79.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Gorebyss",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "reward": 0.51,
+      "cumulative_reward": 12.4108,
+      "commentary": [
+        "p2a: Gorebyss switched to Gorebyss, L88, M (54/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Gorebyss.",
+        "p2a: Gorebyss dropped to 26/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Gorebyss | Gorebyss, L88, M | 54/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Gorebyss",
+        "-damage | p2a: Gorebyss | 26/100",
+        "upkeep",
+        "turn | 11"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 11,
+      "battle_turn": 11,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Wailord",
+        "source": "p2a: Wailord",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "wailord",
+        "hp": 46.0,
+        "status": "Healthy"
+      },
+      "reward": 0.49,
+      "cumulative_reward": 12.9008,
+      "commentary": [
+        "p2a: Wailord switched to Wailord, L88, M (73/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Wailord.",
+        "p2a: Wailord dropped to 46/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Wailord | Wailord, L88, M | 73/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Wailord",
+        "-damage | p2a: Wailord | 46/100",
+        "upkeep",
+        "turn | 12"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 12,
+      "battle_turn": 12,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "wailord",
+        "hp": 46.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Vigoroth",
+        "source": "p2a: Vigoroth",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "vigoroth",
+        "hp": 52.0,
+        "status": "Healthy"
+      },
+      "reward": 0.49,
+      "cumulative_reward": 13.3908,
+      "commentary": [
+        "p2a: Vigoroth switched to Vigoroth, L89, M (79/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Vigoroth.",
+        "p2a: Vigoroth dropped to 52/100 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Vigoroth | Vigoroth, L89, M | 79/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Vigoroth",
+        "-damage | p2a: Vigoroth | 52/100",
+        "upkeep",
+        "turn | 13"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 13,
+      "battle_turn": 13,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 52.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Night Slash",
+        "source": "p2a: Vigoroth",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 92.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "vigoroth",
+        "hp": 15.0,
+        "status": "Healthy"
+      },
+      "reward": 0.54,
+      "cumulative_reward": 13.9308,
+      "commentary": [
+        "p2a: Vigoroth used Night Slash on p1a: Tangrowth.",
+        "p1a: Tangrowth dropped to 279/323 HP.",
+        "p2a: Vigoroth dropped to 43/100 | [from] item: Life Orb HP.",
+        "p1a: Tangrowth used Earthquake on p2a: Vigoroth.",
+        "p2a: Vigoroth dropped to 15/100 HP.",
+        "p1a: Tangrowth recovered to 299/323 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "move | p2a: Vigoroth | Night Slash | p1a: Tangrowth",
+        "-damage | p1a: Tangrowth | 279/323",
+        "-damage | p2a: Vigoroth | 43/100 | [from] item: Life Orb",
+        "move | p1a: Tangrowth | Earthquake | p2a: Vigoroth",
+        "-damage | p2a: Vigoroth | 15/100",
+        "-heal | p1a: Tangrowth | 299/323 | [from] item: Leftovers",
+        "upkeep",
+        "turn | 14"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 14,
+      "battle_turn": 14,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 92.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "vigoroth",
+        "hp": 15.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Return",
+        "source": "p2a: Vigoroth",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 70.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "reward": 2.8063,
+      "cumulative_reward": 16.7371,
+      "commentary": [
+        "p2a: Vigoroth used Return on p1a: Tangrowth.",
+        "p1a: Tangrowth dropped to 208/323 HP.",
+        "p2a: Vigoroth dropped to 5/100 | [from] item: Life Orb HP.",
+        "p1a: Tangrowth used Earthquake on p2a: Vigoroth.",
+        "p2a: Vigoroth dropped to 0 fnt HP.",
+        "p2a: Vigoroth fainted.",
+        "p1a: Tangrowth recovered to 228/323 | [from] item: Leftovers HP.",
+        "p2a: Gorebyss switched to Gorebyss, L88, M (26/100)."
+      ],
+      "showdown_events": [
+        "move | p2a: Vigoroth | Return | p1a: Tangrowth",
+        "-damage | p1a: Tangrowth | 208/323",
+        "-damage | p2a: Vigoroth | 5/100 | [from] item: Life Orb",
+        "move | p1a: Tangrowth | Earthquake | p2a: Vigoroth",
+        "-damage | p2a: Vigoroth | 0 fnt",
+        "faint | p2a: Vigoroth",
+        "-heal | p1a: Tangrowth | 228/323 | [from] item: Leftovers",
+        "upkeep",
+        "switch | p2a: Gorebyss | Gorebyss, L88, M | 26/100",
+        "turn | 15"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 15,
+      "battle_turn": 15,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 70.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Wailord",
+        "source": "p2a: Wailord",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 76.8,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "wailord",
+        "hp": 19.0,
+        "status": "Healthy"
+      },
+      "reward": 0.615,
+      "cumulative_reward": 17.3521,
+      "commentary": [
+        "p2a: Wailord switched to Wailord, L88, M (46/100).",
+        "p1a: Tangrowth used Earthquake on p2a: Wailord.",
+        "p2a: Wailord dropped to 19/100 HP.",
+        "p1a: Tangrowth recovered to 248/323 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Wailord | Wailord, L88, M | 46/100",
+        "move | p1a: Tangrowth | Earthquake | p2a: Wailord",
+        "-damage | p2a: Wailord | 19/100",
+        "-heal | p1a: Tangrowth | 248/323 | [from] item: Leftovers",
+        "upkeep",
+        "turn | 16"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 16,
+      "battle_turn": 16,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 76.8,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "wailord",
+        "hp": 19.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "earthquake"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "tangrowth",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_after": {
+        "name": "wailord",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "reward": -1.22,
+      "cumulative_reward": 16.1321,
+      "commentary": [],
+      "showdown_events": [],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "swordsdance"
+        },
+        {
+          "action": "move",
+          "choice": "rockslide"
+        },
+        {
+          "action": "move",
+          "choice": "powerwhip"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 17,
+      "battle_turn": 16,
+      "player_active_before": {
+        "name": "tangrowth",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_before": {
+        "name": "wailord",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "corsola"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Self-Destruct",
+        "source": "p2a: Wailord",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 87.2,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 16.0821,
+      "commentary": [
+        "p2a: Wailord used Self-Destruct on p1a: Tangrowth.",
+        "p1a: Tangrowth dropped to 0 fnt HP.",
+        "p2a: Wailord fainted.",
+        "p1a: Tangrowth fainted.",
+        "p2a: Salamence switched to Salamence, L74, M (100/100).",
+        "p1a: Corsola switched to Corsola, L98, M (232/266)."
+      ],
+      "showdown_events": [
+        "move | p2a: Wailord | Self-Destruct | p1a: Tangrowth",
+        "-crit | p1a: Tangrowth",
+        "-damage | p1a: Tangrowth | 0 fnt",
+        "faint | p2a: Wailord",
+        "faint | p1a: Tangrowth",
+        "upkeep",
+        "switch | p2a: Salamence | Salamence, L74, M | 100/100",
+        "switch | p1a: Corsola | Corsola, L98, M | 232/266",
+        "-ability | p2a: Salamence | Intimidate | boost",
+        "-unboost | p1a: Corsola | atk | 1",
+        "turn | 17"
+      ],
+      "valid_actions": [
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 18,
+      "battle_turn": 17,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 87.2,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "recover"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Gorebyss",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "reward": 0.1625,
+      "cumulative_reward": 16.2446,
+      "commentary": [
+        "p2a: Gorebyss switched to Gorebyss, L88, M (26/100).",
+        "p1a: Corsola used Recover on p1a: Corsola.",
+        "p1a: Corsola recovered to 266/266 HP."
+      ],
+      "showdown_events": [
+        "switch | p2a: Gorebyss | Gorebyss, L88, M | 26/100",
+        "move | p1a: Corsola | Recover | p1a: Corsola",
+        "-heal | p1a: Corsola | 266/266",
+        "upkeep",
+        "turn | 18"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 19,
+      "battle_turn": 18,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 26.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "gorebyss"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "gorebyss",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 16.0,
+        "status": "Healthy"
+      },
+      "reward": -3.2333,
+      "cumulative_reward": 13.0113,
+      "commentary": [],
+      "showdown_events": [],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "gorebyss"
+        }
+      ]
+    },
+    {
+      "turn": 20,
+      "battle_turn": 18,
+      "player_active_before": {
+        "name": "gorebyss",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 16.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "corsola"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Hidden Power",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "gorebyss",
+        "hp": 16.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 12.9613,
+      "commentary": [
+        "p1a: Gorebyss switched to Gorebyss, L88, M (56/240).",
+        "p2a: Gorebyss used Hidden Power on p1a: Gorebyss.",
+        "It was super effective.",
+        "p1a: Gorebyss dropped to 0 fnt HP.",
+        "p1a: Gorebyss fainted.",
+        "p2a: Gorebyss dropped to 16/100 | [from] item: Life Orb HP.",
+        "p1a: Corsola switched to Corsola, L98, M (266/266)."
+      ],
+      "showdown_events": [
+        "switch | p1a: Gorebyss | Gorebyss, L88, M | 56/240",
+        "move | p2a: Gorebyss | Hidden Power | p1a: Gorebyss",
+        "-supereffective | p1a: Gorebyss",
+        "-damage | p1a: Gorebyss | 0 fnt",
+        "faint | p1a: Gorebyss",
+        "-damage | p2a: Gorebyss | 16/100 | [from] item: Life Orb",
+        "upkeep",
+        "switch | p1a: Corsola | Corsola, L98, M | 266/266",
+        "turn | 19"
+      ],
+      "valid_actions": [
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 21,
+      "battle_turn": 19,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "gorebyss",
+        "hp": 16.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "recover"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Salamence",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 12.9113,
+      "commentary": [
+        "p2a: Salamence switched to Salamence, L74, M (100/100).",
+        "p1a: Corsola used Recover on [still]."
+      ],
+      "showdown_events": [
+        "switch | p2a: Salamence | Salamence, L74, M | 100/100",
+        "-ability | p2a: Salamence | Intimidate | boost",
+        "-unboost | p1a: Corsola | atk | 1",
+        "move | p1a: Corsola | Recover | [still]",
+        "-fail | p1a: Corsola | heal",
+        "upkeep",
+        "turn | 20"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 22,
+      "battle_turn": 20,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "xatu"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Dragon Dance",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": -1.05,
+      "cumulative_reward": 11.8613,
+      "commentary": [
+        "p1a: Xatu switched to Xatu, L89, M (259/259).",
+        "p2a: Salamence used Dragon Dance on p2a: Salamence."
+      ],
+      "showdown_events": [
+        "switch | p1a: Xatu | Xatu, L89, M | 259/259",
+        "move | p2a: Salamence | Dragon Dance | p2a: Salamence",
+        "-boost | p2a: Salamence | atk | 1",
+        "-boost | p2a: Salamence | spe | 1",
+        "upkeep",
+        "turn | 21"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "xatu"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 23,
+      "battle_turn": 21,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "trick"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Dragon Dance",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": -1.05,
+      "cumulative_reward": 10.8112,
+      "commentary": [
+        "p1a: Xatu used Trick on p2a: Salamence.",
+        "p2a: Salamence used Dragon Dance on p2a: Salamence."
+      ],
+      "showdown_events": [
+        "move | p1a: Xatu | Trick | p2a: Salamence",
+        "-activate | p1a: Xatu | move: Trick | [of] p2a: Salamence",
+        "-item | p2a: Salamence | Choice Scarf | [from] move: Trick",
+        "-item | p1a: Xatu | Lum Berry | [from] move: Trick",
+        "move | p2a: Salamence | Dragon Dance | p2a: Salamence",
+        "-boost | p2a: Salamence | atk | 1",
+        "-boost | p2a: Salamence | spe | 1",
+        "upkeep",
+        "turn | 22"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "move",
+          "choice": "psychic"
+        },
+        {
+          "action": "move",
+          "choice": "trick"
+        },
+        {
+          "action": "move",
+          "choice": "heatwave"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 24,
+      "battle_turn": 22,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "psychic"
+      },
+      "opponent_action": {
+        "type": "switch",
+        "choice": "Gorebyss",
+        "source": "p2a: Gorebyss",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "reward": 3.2167,
+      "cumulative_reward": 14.0279,
+      "commentary": [
+        "p2a: Gorebyss switched to Gorebyss, L88, M (16/100).",
+        "p1a: Xatu used Psychic on p2a: Gorebyss.",
+        "p2a: Gorebyss dropped to 0 fnt HP.",
+        "p2a: Gorebyss fainted.",
+        "p2a: Salamence switched to Salamence, L74, M (100/100)."
+      ],
+      "showdown_events": [
+        "switch | p2a: Gorebyss | Gorebyss, L88, M | 16/100",
+        "move | p1a: Xatu | Psychic | p2a: Gorebyss",
+        "-damage | p2a: Gorebyss | 0 fnt",
+        "faint | p2a: Gorebyss",
+        "upkeep",
+        "switch | p2a: Salamence | Salamence, L74, M | 100/100",
+        "-ability | p2a: Salamence | Intimidate | boost",
+        "-unboost | p1a: Xatu | atk | 1",
+        "turn | 23"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "move",
+          "choice": "psychic"
+        },
+        {
+          "action": "move",
+          "choice": "trick"
+        },
+        {
+          "action": "move",
+          "choice": "heatwave"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 25,
+      "battle_turn": 23,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "grassknot"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 45.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "reward": -0.7979,
+      "cumulative_reward": 13.23,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Xatu.",
+        "p1a: Xatu dropped to 118/259 HP.",
+        "p1a: Xatu used Grass Knot on p2a: Salamence.",
+        "It was resisted.",
+        "p2a: Salamence dropped to 92/100 HP."
+      ],
+      "showdown_events": [
+        "move | p2a: Salamence | Outrage | p1a: Xatu",
+        "-damage | p1a: Xatu | 118/259",
+        "move | p1a: Xatu | Grass Knot | p2a: Salamence",
+        "-resisted | p2a: Salamence",
+        "-damage | p2a: Salamence | 92/100",
+        "upkeep",
+        "turn | 24"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "move",
+          "choice": "psychic"
+        },
+        {
+          "action": "move",
+          "choice": "trick"
+        },
+        {
+          "action": "move",
+          "choice": "heatwave"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 26,
+      "battle_turn": 24,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 45.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "grassknot"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "xatu",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "reward": -3.7875,
+      "cumulative_reward": 9.4425,
+      "commentary": [],
+      "showdown_events": [],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "grassknot"
+        },
+        {
+          "action": "move",
+          "choice": "psychic"
+        },
+        {
+          "action": "move",
+          "choice": "trick"
+        },
+        {
+          "action": "move",
+          "choice": "heatwave"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 27,
+      "battle_turn": 24,
+      "player_active_before": {
+        "name": "xatu",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "corsola"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 9.3925,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Xatu | [from] lockedmove.",
+        "p1a: Xatu dropped to 0 fnt HP.",
+        "p1a: Xatu fainted.",
+        "p1a: Corsola switched to Corsola, L98, M (266/266)."
+      ],
+      "showdown_events": [
+        "move | p2a: Salamence | Outrage | p1a: Xatu | [from] lockedmove",
+        "-damage | p1a: Xatu | 0 fnt",
+        "faint | p1a: Xatu",
+        "upkeep",
+        "switch | p1a: Corsola | Corsola, L98, M | 266/266",
+        "turn | 25"
+      ],
+      "valid_actions": [
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 28,
+      "battle_turn": 25,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "stealthrock"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 60.5,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "reward": -0.7063,
+      "cumulative_reward": 8.6862,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Corsola | [from] lockedmove.",
+        "p1a: Corsola dropped to 145/266 HP.",
+        "p1a: Corsola used Stealth Rock on p2a: Salamence.",
+        "p1a: Corsola recovered to 161/266 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "move | p2a: Salamence | Outrage | p1a: Corsola | [from] lockedmove",
+        "-damage | p1a: Corsola | 145/266",
+        "move | p1a: Corsola | Stealth Rock | p2a: Salamence",
+        "-sidestart | p2: RandomPlayer 1 | move: Stealth Rock",
+        "-heal | p1a: Corsola | 161/266 | [from] item: Leftovers",
+        "-start | p2a: Salamence | confusion | [fatigue]",
+        "upkeep",
+        "turn | 26"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 29,
+      "battle_turn": 26,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 60.5,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 92.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "recover"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 77.0,
+        "status": "Healthy"
+      },
+      "reward": 0.8562,
+      "cumulative_reward": 9.5425,
+      "commentary": [
+        "p2a: Salamence dropped to 77/100 | [from] confusion HP.",
+        "p1a: Corsola used Recover on p1a: Corsola.",
+        "p1a: Corsola recovered to 266/266 HP."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "-damage | p2a: Salamence | 77/100 | [from] confusion",
+        "move | p1a: Corsola | Recover | p1a: Corsola",
+        "-heal | p1a: Corsola | 266/266",
+        "upkeep",
+        "turn | 27"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 30,
+      "battle_turn": 27,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 77.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "aggron"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": 0.1833,
+      "cumulative_reward": 9.7258,
+      "commentary": [
+        "p1a: Aggron switched to Aggron, L86, F (261/261).",
+        "p2a: Salamence dropped to 63/100 | [from] confusion HP."
+      ],
+      "showdown_events": [
+        "switch | p1a: Aggron | Aggron, L86, F | 261/261",
+        "-activate | p2a: Salamence | confusion",
+        "-damage | p2a: Salamence | 63/100 | [from] confusion",
+        "upkeep",
+        "turn | 28"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 31,
+      "battle_turn": 28,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "corsola"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 60.5,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": -0.7063,
+      "cumulative_reward": 9.0196,
+      "commentary": [
+        "p1a: Corsola switched to Corsola, L98, M (266/266).",
+        "p2a: Salamence used Outrage on p1a: Corsola.",
+        "p1a: Corsola dropped to 145/266 HP.",
+        "p1a: Corsola recovered to 161/266 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "switch | p1a: Corsola | Corsola, L98, M | 266/266",
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Corsola",
+        "-damage | p1a: Corsola | 145/266",
+        "-heal | p1a: Corsola | 161/266 | [from] item: Leftovers",
+        "upkeep",
+        "turn | 29"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "corsola"
+        }
+      ]
+    },
+    {
+      "turn": 32,
+      "battle_turn": 29,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 60.5,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "stealthrock"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 22.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": -0.6813,
+      "cumulative_reward": 8.3383,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Corsola | [from] lockedmove.",
+        "p1a: Corsola dropped to 44/266 HP.",
+        "p1a: Corsola used Stealth Rock on [still].",
+        "p1a: Corsola recovered to 60/266 | [from] item: Leftovers HP."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Corsola | [from] lockedmove",
+        "-damage | p1a: Corsola | 44/266",
+        "move | p1a: Corsola | Stealth Rock | [still]",
+        "-fail | p1a: Corsola",
+        "-heal | p1a: Corsola | 60/266 | [from] item: Leftovers",
+        "upkeep",
+        "turn | 30"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 33,
+      "battle_turn": 30,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 22.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "surf"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "corsola",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": -3.425,
+      "cumulative_reward": 4.9133,
+      "commentary": [],
+      "showdown_events": [],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "explosion"
+        },
+        {
+          "action": "move",
+          "choice": "recover"
+        },
+        {
+          "action": "move",
+          "choice": "surf"
+        },
+        {
+          "action": "move",
+          "choice": "stealthrock"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 34,
+      "battle_turn": 30,
+      "player_active_before": {
+        "name": "corsola",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "aggron"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 4.8633,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Corsola.",
+        "p1a: Corsola dropped to 0 fnt HP.",
+        "p1a: Corsola fainted.",
+        "p1a: Aggron switched to Aggron, L86, F (261/261)."
+      ],
+      "showdown_events": [
+        "-end | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Corsola",
+        "-damage | p1a: Corsola | 0 fnt",
+        "faint | p1a: Corsola",
+        "upkeep",
+        "switch | p1a: Aggron | Aggron, L86, F | 261/261",
+        "turn | 31"
+      ],
+      "valid_actions": [
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 35,
+      "battle_turn": 31,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 100.0,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 85.4,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": 0.7125,
+      "cumulative_reward": 5.5758,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Aggron | [from] lockedmove.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 223/261 HP.",
+        "p1a: Aggron used Rock Polish on p1a: Aggron."
+      ],
+      "showdown_events": [
+        "move | p2a: Salamence | Outrage | p1a: Aggron | [from] lockedmove",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 223/261",
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 2",
+        "upkeep",
+        "turn | 32"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 36,
+      "battle_turn": 32,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 85.4,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 71.3,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "reward": 0.7188,
+      "cumulative_reward": 6.2946,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Aggron | [from] lockedmove.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 186/261 HP.",
+        "p1a: Aggron used Rock Polish on p1a: Aggron."
+      ],
+      "showdown_events": [
+        "move | p2a: Salamence | Outrage | p1a: Aggron | [from] lockedmove",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 186/261",
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 2",
+        "-start | p2a: Salamence | confusion | [fatigue]",
+        "upkeep",
+        "turn | 33"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 37,
+      "battle_turn": 33,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 71.3,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 63.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 71.3,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "reward": 0.1833,
+      "cumulative_reward": 6.4779,
+      "commentary": [
+        "p1a: Aggron used Rock Polish on p1a: Aggron.",
+        "p2a: Salamence dropped to 49/100 | [from] confusion HP."
+      ],
+      "showdown_events": [
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 2",
+        "-activate | p2a: Salamence | confusion",
+        "-damage | p2a: Salamence | 49/100 | [from] confusion",
+        "upkeep",
+        "turn | 34"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 38,
+      "battle_turn": 34,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 71.3,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 58.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "reward": -0.2562,
+      "cumulative_reward": 6.2217,
+      "commentary": [
+        "p1a: Aggron used Rock Polish on p1a: Aggron.",
+        "p2a: Salamence used Outrage on p1a: Aggron.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 153/261 HP."
+      ],
+      "showdown_events": [
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 0",
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Aggron",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 153/261",
+        "upkeep",
+        "turn | 35"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 39,
+      "battle_turn": 35,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 58.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 45.6,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "reward": -0.2625,
+      "cumulative_reward": 5.9592,
+      "commentary": [
+        "p1a: Aggron used Rock Polish on p1a: Aggron.",
+        "p2a: Salamence used Outrage on p1a: Aggron | [from] lockedmove.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 119/261 HP."
+      ],
+      "showdown_events": [
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 0",
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Aggron | [from] lockedmove",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 119/261",
+        "upkeep",
+        "turn | 36"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 40,
+      "battle_turn": 36,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 45.6,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 31.8,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "reward": -0.275,
+      "cumulative_reward": 5.6842,
+      "commentary": [
+        "p1a: Aggron used Rock Polish on p1a: Aggron.",
+        "p2a: Salamence used Outrage on p1a: Aggron.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 83/261 HP."
+      ],
+      "showdown_events": [
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 0",
+        "-end | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Aggron",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 83/261",
+        "upkeep",
+        "turn | 37"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 41,
+      "battle_turn": 37,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 31.8,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "ambipom"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "ambipom",
+        "hp": 28.3,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "reward": -1.175,
+      "cumulative_reward": 4.5092,
+      "commentary": [
+        "p1a: Ambipom switched to Ambipom, L80, F (251/251).",
+        "p2a: Salamence used Outrage on p1a: Ambipom | [from] lockedmove.",
+        "p1a: Ambipom dropped to 71/251 HP."
+      ],
+      "showdown_events": [
+        "switch | p1a: Ambipom | Ambipom, L80, F | 251/251",
+        "move | p2a: Salamence | Outrage | p1a: Ambipom | [from] lockedmove",
+        "-damage | p1a: Ambipom | 71/251",
+        "-start | p2a: Salamence | confusion | [fatigue]",
+        "upkeep",
+        "turn | 38"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        },
+        {
+          "action": "switch",
+          "choice": "ambipom"
+        }
+      ]
+    },
+    {
+      "turn": 42,
+      "battle_turn": 38,
+      "player_active_before": {
+        "name": "ambipom",
+        "hp": 28.3,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 49.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "pursuit"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "ambipom",
+        "hp": 28.3,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "reward": 0.6333,
+      "cumulative_reward": 5.1425,
+      "commentary": [
+        "p2a: Salamence dropped to 36/100 | [from] confusion HP.",
+        "p1a: Ambipom used Pursuit on p2a: Salamence.",
+        "p2a: Salamence dropped to 8/100 HP."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "-damage | p2a: Salamence | 36/100 | [from] confusion",
+        "move | p1a: Ambipom | Pursuit | p2a: Salamence",
+        "-damage | p2a: Salamence | 8/100",
+        "upkeep",
+        "turn | 39"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "pursuit"
+        },
+        {
+          "action": "move",
+          "choice": "uturn"
+        },
+        {
+          "action": "move",
+          "choice": "return"
+        },
+        {
+          "action": "move",
+          "choice": "lowkick"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 43,
+      "battle_turn": 39,
+      "player_active_before": {
+        "name": "ambipom",
+        "hp": 28.3,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "pursuit"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "ambipom",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "reward": -3.4937,
+      "cumulative_reward": 1.6487,
+      "commentary": [],
+      "showdown_events": [],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "pursuit"
+        },
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 44,
+      "battle_turn": 39,
+      "player_active_before": {
+        "name": "ambipom",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "switch",
+        "choice": "aggron"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 31.8,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "reward": -0.05,
+      "cumulative_reward": 1.5987,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Ambipom.",
+        "p1a: Ambipom dropped to 0 fnt HP.",
+        "p1a: Ambipom fainted.",
+        "p1a: Aggron switched to Aggron, L86, F (83/261)."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Ambipom",
+        "-damage | p1a: Ambipom | 0 fnt",
+        "faint | p1a: Ambipom",
+        "upkeep",
+        "switch | p1a: Aggron | Aggron, L86, F | 83/261",
+        "turn | 40"
+      ],
+      "valid_actions": [
+        {
+          "action": "switch",
+          "choice": "aggron"
+        }
+      ]
+    },
+    {
+      "turn": 45,
+      "battle_turn": 40,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 31.8,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": {
+        "type": "move",
+        "choice": "Outrage",
+        "source": "p2a: Salamence",
+        "confidence": "logged"
+      },
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 19.2,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "reward": -0.2562,
+      "cumulative_reward": 1.3425,
+      "commentary": [
+        "p2a: Salamence used Outrage on p1a: Aggron | [from] lockedmove.",
+        "It was resisted.",
+        "p1a: Aggron dropped to 50/261 HP.",
+        "p1a: Aggron used Rock Polish on p1a: Aggron."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "move | p2a: Salamence | Outrage | p1a: Aggron | [from] lockedmove",
+        "-resisted | p1a: Aggron",
+        "-damage | p1a: Aggron | 50/261",
+        "move | p1a: Aggron | Rock Polish | p1a: Aggron",
+        "-boost | p1a: Aggron | spe | 2",
+        "upkeep",
+        "turn | 41"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        }
+      ]
+    },
+    {
+      "turn": 46,
+      "battle_turn": 41,
+      "player_active_before": {
+        "name": "aggron",
+        "hp": 19.2,
+        "status": "Healthy"
+      },
+      "opponent_active_before": {
+        "name": "salamence",
+        "hp": 8.0,
+        "status": "Healthy"
+      },
+      "player_action": {
+        "action": "move",
+        "choice": "rockpolish"
+      },
+      "opponent_action": null,
+      "player_active_after": {
+        "name": "aggron",
+        "hp": 19.2,
+        "status": "Healthy"
+      },
+      "opponent_active_after": {
+        "name": "salamence",
+        "hp": 0.0,
+        "status": "FNT (status) object"
+      },
+      "reward": 3.0833,
+      "cumulative_reward": 4.4258,
+      "commentary": [
+        "p2a: Salamence dropped to 0 fnt | [from] confusion HP.",
+        "p2a: Salamence fainted."
+      ],
+      "showdown_events": [
+        "-activate | p2a: Salamence | confusion",
+        "-damage | p2a: Salamence | 0 fnt | [from] confusion",
+        "faint | p2a: Salamence"
+      ],
+      "valid_actions": [
+        {
+          "action": "move",
+          "choice": "rockpolish"
+        },
+        {
+          "action": "move",
+          "choice": "headsmash"
+        },
+        {
+          "action": "move",
+          "choice": "earthquake"
+        },
+        {
+          "action": "move",
+          "choice": "icepunch"
+        }
+      ]
+    }
+  ]
+}

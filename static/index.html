@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenEnv-WolfeClick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__glow"></div>
+        <h1>OpenEnv-WolfeClick</h1>
+        <p>Watch how our fine-tuned model plays Pokemon.</p>
+      </header>
+
+      <nav class="top-tabs" aria-label="Primary">
+        <button class="top-tab is-active" data-tab="replay">Battle Replay</button>
+        <button class="top-tab" data-tab="design">Environment Design</button>
+        <button class="top-tab" data-tab="start">Get Started</button>
+      </nav>
+
+      <main>
+        <section id="tab-replay" class="tab-panel is-active">
+          <div class="replay-layout">
+            <section class="battle-column">
+              <div id="landing-card" class="landing-card">
+                <div class="landing-card__inner">
+                  <h2>Watch how our fine-tuned model plays Pokemon</h2>
+                  <p>
+                    Start the replay to watch the full battle automatically, or switch to
+                    frame-by-frame mode to inspect the exact state, legal actions, and decisions
+                    on each turn.
+                  </p>
+                </div>
+              </div>
+
+              <div id="battle-screen" class="battle-screen is-hidden">
+                <div class="battle-screen__top">
+                  <div>
+                    <div id="turn-title" class="battle-title">Turn 1 Replay</div>
+                    <div id="battle-subtitle" class="battle-subtitle">Model-visible strategic replay</div>
+                  </div>
+                  <div class="battle-meta">
+                    <div><span>Outcome</span><strong id="meta-outcome">WON</strong></div>
+                    <div><span>Total Reward</span><strong id="meta-total-reward">0.00</strong></div>
+                  </div>
+                </div>
+
+                <div class="arena-grid">
+                  <article class="battle-card">
+                    <div class="battle-card__header">
+                      <h3 id="player-name">Player</h3>
+                      <span id="player-status" class="status-pill">Healthy</span>
+                    </div>
+                    <div id="player-transition" class="transition-line"></div>
+                    <div class="sprite-frame">
+                      <img id="player-sprite" alt="Player Pokemon" />
+                    </div>
+                    <div id="player-hp-bar" class="hp-bar"><span></span></div>
+                    <div id="player-hp-label" class="hp-label">100%</div>
+                  </article>
+
+                  <article class="battle-card">
+                    <div class="battle-card__header">
+                      <h3 id="opponent-name">Opponent</h3>
+                      <span id="opponent-status" class="status-pill">Healthy</span>
+                    </div>
+                    <div id="opponent-transition" class="transition-line"></div>
+                    <div class="sprite-frame">
+                      <img id="opponent-sprite" alt="Opponent Pokemon" />
+                    </div>
+                    <div id="opponent-hp-bar" class="hp-bar"><span></span></div>
+                    <div id="opponent-hp-label" class="hp-label">100%</div>
+                  </article>
+                </div>
+
+                <div class="detail-grid">
+                  <article class="panel-card">
+                    <h4>Turn Actions</h4>
+                    <div id="model-action" class="action-line"></div>
+                    <div id="opponent-action" class="action-line"></div>
+                    <div id="reward-line" class="reward-line"></div>
+                  </article>
+
+                  <article class="panel-card">
+                    <h4>Turn Commentary</h4>
+                    <ul id="commentary-list" class="commentary-list"></ul>
+                  </article>
+                </div>
+
+                <div class="detail-grid">
+                  <article class="panel-card">
+                    <h4>Model Visible Team State</h4>
+                    <div class="state-label">Your Team</div>
+                    <div id="player-team" class="chip-row"></div>
+                    <div class="state-label">Opponent Revealed So Far</div>
+                    <div id="opponent-team" class="chip-row"></div>
+                  </article>
+
+                  <article class="panel-card">
+                    <h4>Legal Actions This Turn</h4>
+                    <div id="valid-actions" class="chip-row"></div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <aside class="sidebar">
+              <section class="sidebar-card">
+                <h3>Replay Summary</h3>
+                <div id="summary-lines" class="summary-lines"></div>
+              </section>
+
+              <section class="sidebar-card">
+                <label class="control-label" for="speed">Autoplay Speed</label>
+                <div class="speed-row">
+                  <input id="speed" type="range" min="1" max="10" step="0.5" value="2.5" />
+                  <span id="speed-value" class="speed-value">2.5s</span>
+                </div>
+              </section>
+
+              <section class="sidebar-card action-stack">
+                <button id="start-btn" class="btn btn--primary">Start Game</button>
+                <button id="frame-btn" class="btn btn--secondary">View Frame by Frame</button>
+              </section>
+
+              <section class="sidebar-card navigator-card">
+                <div class="navigator-top">
+                  <button id="prev-btn" class="btn btn--icon" aria-label="Previous turn">◀</button>
+                  <div class="turn-box">
+                    <label class="control-label" for="turn-input">Turn</label>
+                    <input id="turn-input" type="number" min="1" step="1" value="1" />
+                  </div>
+                  <button id="next-btn" class="btn btn--icon" aria-label="Next turn">▶</button>
+                </div>
+                <button id="jump-btn" class="btn btn--secondary btn--wide">Jump To Turn</button>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section id="tab-design" class="tab-panel content-page">
+          <article class="content-card">
+            <h2>Environment Design</h2>
+            <p>
+              OpenEnv-WolfeClick wraps competitive Pokemon Showdown as an OpenEnv-compatible
+              environment.
+            </p>
+            <p>The model receives:</p>
+            <ul>
+              <li>the active field</li>
+              <li>the full self roster</li>
+              <li>revealed opponent history</li>
+              <li>the exact legal actions for the turn</li>
+            </ul>
+            <p>It must emit exactly one JSON action:</p>
+            <pre><code>{"action": "move" | "switch", "choice": "Exact Name of Move or Pokemon"}</code></pre>
+            <p>
+              The training loop then collects real trajectories from live battles and applies GRPO
+              to improve the action policy on those rollouts.
+            </p>
+          </article>
+        </section>
+
+        <section id="tab-start" class="tab-panel content-page">
+          <article class="content-card">
+            <h2>Get Started</h2>
+            <h3>Record a real battle</h3>
+            <pre><code>python record_battle.py --revision grpo-qwen3-4b-run3 --output battle_logs/raw_battle.json</code></pre>
+            <h3>Convert it for replay</h3>
+            <pre><code>python convert_battle_log.py --input battle_logs/raw_battle.json --output battle_logs/replay_battle.json</code></pre>
+            <h3>Launch locally</h3>
+            <pre><code>uv venv
+source .venv/bin/activate
+uv pip install -r requirements_space.txt
+uvicorn space_app:app --reload --host 0.0.0.0 --port 7860</code></pre>
+            <h3>Included notebooks</h3>
+            <ul>
+              <li><code>trainer.ipynb</code></li>
+              <li><code>watch_battle.ipynb</code></li>
+              <li><code>benchmarks/benchmark.ipynb</code></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js" type="module"></script>
+  </body>
+  </html>
